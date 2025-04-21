@@ -1,0 +1,59 @@
+body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; color: #333; background-color: #fff; }
+.container { max-width: 800px; margin: auto; padding: 2rem; }
+header { text-align: left; margin-bottom: 2rem; }
+.profile { display: flex; align-items: flex-start; justify-content: flex-start; margin-top: 1rem; gap: 2rem; }
+.profile img { width: 150px; height: 150px; border-radius: 0; object-fit: cover; margin-top: 1rem; margin-right: 0; cursor: pointer; }
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.description { font-size: 1rem; color: #555; max-width: 600px; margin: 0.5rem 0; line-height: 1.5; }
+h1 { margin: 0.5rem 0; font-weight: 600; line-height: 1; }
+section { margin-bottom: 2rem; }
+h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
+.publication-item { margin-bottom: 1rem; }
+.publication-item a { font-weight: 600; color: #0066cc; text-decoration: none; }
+.publication-item .tldr { font-size: 0.9rem; color: #555; margin-top: 0.3rem; }
+.tldr::before { content: "TL;DR: "; font-weight: 600; }
+.lang-switch { font-size: 1rem; margin: 0.5rem 0; }
+.lang-btn { cursor: pointer; text-decoration: underline; margin: 0 0.5rem 0 0; }
+.lang-en { color: rgb(117, 255, 117); }
+.lang-zh { color: rgb(255, 165, 180); }
+.lang-btn.active { font-weight: bold; }
+.description-zh { display: none; }
+.name-zh { display: none; }
+
+:root {
+  --en-font-size: 1rem;
+  --zh-scale: 1; /* scale factor for all Chinese text relative to English font-size */
+}
+
+/* Language-specific font-size overrides for descriptions only */
+.description-en {
+  font-size: var(--en-font-size);
+}
+.description-zh {
+  font-size: calc(var(--en-font-size) * var(--zh-scale));
+}
+
+/* Links button styles */
+.links {
+  margin-top: 1rem;
+  display: flex;
+}
+.link-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 0.75rem 0 0;
+}
+.btn-cv { color: #9b59b6; }       /* mellow purple */
+.btn-github { color: #7f8c8d; }   /* muted gray */
+.btn-x { color: #5dade2; }        /* soft sky blue */
+.btn-linkedin { color: #3498db; } /* mellow blue */
+
+.publication-item .authors {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.25rem 0;
+}
