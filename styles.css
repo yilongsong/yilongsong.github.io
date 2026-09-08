@@ -64,3 +64,20 @@ h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
   max-width: 100%;
   width: 100%;
 }
+/* Publication entries without a link yet */
+.publication-item .title { font-weight: 600; color: #333; }
+
+.publication-item .venue {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.25rem 0;
+  font-style: italic;
+}
+
+/* Author links should not inherit the bold blue title-link style */
+.publication-item .authors a {
+  font-weight: 400;
+  color: #0066cc;
+  text-decoration: none;
+}
+.publication-item .authors a:hover { text-decoration: underline; }
