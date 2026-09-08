@@ -50,7 +50,10 @@ document.addEventListener('keydown', (e) => {
 // Assemble email at runtime to keep it out of the static HTML (basic scraper protection)
 const emailLink = document.getElementById('email-link');
 const emailAddr = ['song', '0837'].join('') + '@' + ['umn', 'edu'].join('.');
-emailLink.addEventListener('click', () => {
+emailLink.addEventListener('click', (e) => {
+  e.preventDefault();
   emailLink.textContent = emailAddr;
   emailLink.classList.add('revealed');
+  emailLink.removeAttribute('href');
+  emailLink.removeAttribute('role');
 }, { once: true });
