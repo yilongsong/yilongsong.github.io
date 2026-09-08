@@ -17,6 +17,44 @@ h1 { margin: 0.5rem 0; font-weight: 600; line-height: 1; }
   border-bottom: 1px solid #d4d4d8;
 }
 .description a:hover { color: #0066cc; border-bottom-color: #0066cc; }
+
+/* Favorites one-liner dropdown */
+.dropdown { position: relative; display: inline-block; }
+.dropdown-toggle {
+  font: inherit;
+  color: inherit;
+  border: none;
+  border-bottom: 1px solid #d4d4d8;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.dropdown-toggle:hover,
+.dropdown-toggle:focus-visible { color: #0066cc; border-bottom-color: #0066cc; outline: none; }
+.dropdown-toggle .caret { font-size: 0.7em; margin-left: 0.25em; color: #9ca3af; }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 10;
+  min-width: 11rem;
+  margin: 0;
+  padding: 0.3rem;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+  white-space: nowrap;
+}
+.dropdown-menu li {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #444;
+}
+.dropdown-menu li:hover { background-color: #f4f5f7; color: #1a1a1a; }
+.dropdown-menu li.selected { font-weight: 600; color: #1a1a1a; }
 section { margin-bottom: 2rem; }
 h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
 

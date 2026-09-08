@@ -20,7 +20,23 @@
           </p>
 
           <p class="description">
-            Previously, I received a B.A. in Mathematics and Computer Science from Carleton College, and M.S. in Computer Science from Brown University. My favorite US state is Colorado 🏔️.
+            Previously, I received a B.A. in Mathematics and Computer Science from Carleton College, and M.S. in Computer Science from Brown University.
+          </p>
+
+          <p class="description favorites">
+            My favorite
+            <span class="dropdown" id="favorite-dropdown">
+              <button type="button" class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">US state<span class="caret">▾</span></button>
+              <ul class="dropdown-menu" role="listbox" hidden>
+                <li role="option" data-value="Colorado 🏔️" class="selected">US state</li>
+                <li role="option" data-value="Olympic National Park 🌲">US national park</li>
+                <li role="option" data-value="Shanghai (my hometown) 🏙️">Chinese city</li>
+                <li role="option" data-value="The Ice Cream Barn (Swansea, MA) 🍦">ice-cream spot</li>
+                <li role="option" data-value="Vanda (Warwick, RI) 🍽️">restaurant</li>
+                <li role="option" data-value="Thus Spoke Zarathustra 📖">book</li>
+              </ul>
+            </span>
+            is <span id="favorite-answer">Colorado 🏔️</span>.
           </p>
 
           <div class="links">
