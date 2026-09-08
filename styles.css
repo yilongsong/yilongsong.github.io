@@ -13,26 +13,6 @@ header { text-align: left; margin-bottom: 2rem; }
 h1 { margin: 0.5rem 0; font-weight: 600; line-height: 1; }
 section { margin-bottom: 2rem; }
 h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
-.lang-switch { font-size: 1rem; margin: 0.5rem 0; }
-.lang-btn { cursor: pointer; text-decoration: underline; margin: 0 0.5rem 0 0; }
-.lang-en { color: rgb(117, 255, 117); }
-.lang-zh { color: rgb(255, 165, 180); }
-.lang-btn.active { font-weight: bold; }
-.description-zh { display: none; }
-.name-zh { display: none; }
-
-:root {
-  --en-font-size: 1rem;
-  --zh-scale: 1; /* scale factor for all Chinese text relative to English font-size */
-}
-
-/* Language-specific font-size overrides for descriptions only */
-.description-en {
-  font-size: var(--en-font-size);
-}
-.description-zh {
-  font-size: calc(var(--en-font-size) * var(--zh-scale));
-}
 
 /* Links button styles */
 .links {
@@ -49,12 +29,6 @@ h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
 .btn-x { color: #5dade2; }        /* soft sky blue */
 .btn-linkedin { color: #3498db; } /* mellow blue */
 
-
-/* Override for centered text */
-.description[style*="text-align: center"] {
-  max-width: 100%;
-  width: 100%;
-}
 
 /* ---- Publications (layout after iprl.stanford.edu/publications) ---- */
 .publication-item {
