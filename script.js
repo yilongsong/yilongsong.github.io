@@ -46,3 +46,11 @@ document.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeMenu();
 });
+
+// Assemble email at runtime to keep it out of the static HTML (basic scraper protection)
+const emailLink = document.getElementById('email-link');
+const emailAddr = ['song', '0837'].join('') + '@' + ['umn', 'edu'].join('.');
+emailLink.addEventListener('click', () => {
+  emailLink.textContent = emailAddr;
+  emailLink.classList.add('revealed');
+}, { once: true });
