@@ -52,8 +52,9 @@ const emailLink = document.getElementById('email-link');
 const emailAddr = ['song', '0837'].join('') + '@' + ['umn', 'edu'].join('.');
 emailLink.addEventListener('click', (e) => {
   e.preventDefault();
-  emailLink.textContent = emailAddr;
-  emailLink.classList.add('revealed');
-  emailLink.removeAttribute('href');
-  emailLink.removeAttribute('role');
-}, { once: true });
+  // don't collapse if the user just drag-selected the address to copy it
+  const sel = window.getSelection();
+  if (sel && !sel.isCollapsed && emailLink.contains(sel.anchorNode)) return;
+  const revealed = emailLink.classList.toggle('revealed');
+  emailLink.textContent = revealed ? emailAddr : 'Email';
+});

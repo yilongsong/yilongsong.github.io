@@ -69,7 +69,6 @@ h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
   margin: 0 0.75rem 0 0;
 }
 .btn-email { color: #e58e26; }    /* mellow amber */
-.btn-email.revealed { cursor: text; text-decoration: none; user-select: all; }
 .btn-cv { color: #9b59b6; }       /* mellow purple */
 .btn-github { color: #7f8c8d; }   /* muted gray */
 .btn-x { color: #5dade2; }        /* soft sky blue */
