@@ -13,10 +13,6 @@ header { text-align: left; margin-bottom: 2rem; }
 h1 { margin: 0.5rem 0; font-weight: 600; line-height: 1; }
 section { margin-bottom: 2rem; }
 h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
-.publication-item { margin-bottom: 1rem; }
-.publication-item a { font-weight: 600; color: #0066cc; text-decoration: none; }
-.publication-item .tldr { font-size: 0.9rem; color: #555; margin-top: 0.3rem; }
-.tldr::before { content: "TL;DR: "; font-weight: 600; }
 .lang-switch { font-size: 1rem; margin: 0.5rem 0; }
 .lang-btn { cursor: pointer; text-decoration: underline; margin: 0 0.5rem 0 0; }
 .lang-en { color: rgb(117, 255, 117); }
@@ -53,31 +49,45 @@ h2 { font-weight: 400; border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
 .btn-x { color: #5dade2; }        /* soft sky blue */
 .btn-linkedin { color: #3498db; } /* mellow blue */
 
-.publication-item .authors {
-  font-size: 0.9rem;
-  color: #444;
-  margin: 0.25rem 0;
-}
 
 /* Override for centered text */
 .description[style*="text-align: center"] {
   max-width: 100%;
   width: 100%;
 }
-/* Publication entries without a link yet */
-.publication-item .title { font-weight: 600; color: #333; }
 
-.publication-item .venue {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0.25rem 0;
-  font-style: italic;
-}
-
-/* Author links should not inherit the bold blue title-link style */
-.publication-item .authors a {
-  font-weight: 400;
-  color: #0066cc;
+/* ---- Publications (layout after iprl.stanford.edu/publications) ---- */
+.publication-item {
+  display: block;
+  padding: 0.6rem 0.8rem;
+  margin: 0 -0.8rem 0.25rem;
+  border-radius: 8px;
   text-decoration: none;
+  color: inherit;
 }
-.publication-item .authors a:hover { text-decoration: underline; }
+/* only entries that link somewhere react to the cursor */
+a.publication-item.pub-linked { transition: background-color 0.15s ease; }
+a.publication-item.pub-linked:hover { background-color: #f4f5f7; }
+
+.pub-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+.pub-authors {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 0.15rem;
+}
+.pub-venue {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 0.15rem;
+}
+.pub-authors a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #d4d4d8;
+}
+.pub-authors a:hover { color: #0066cc; border-bottom-color: #0066cc; }
